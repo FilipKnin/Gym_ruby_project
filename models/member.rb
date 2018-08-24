@@ -11,4 +11,14 @@ class Member
     @premium = options['premium']
   end
 
+  def save()
+    sql = "INSERT INTO members
+          (name, email, phone, dob, premium)
+          VALUES
+          ($1, $2, $3, $4, $5) RETURNING *"
+    values = [@name, @email, @phone, @dob, @premium]
+    result = SqlRunner.run(sql,values)
+    @id = result[0]['id'].to_i
+  end
+
 end

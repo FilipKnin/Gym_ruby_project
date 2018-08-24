@@ -3,6 +3,7 @@ require_relative("../member")
 require_relative("../personaltrainer")
 require_relative("../gymclass")
 
+
 class TestMember < MiniTest::Test
 
   def setup
