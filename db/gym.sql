@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS gymclassesmembers;
+DROP TABLE IF EXISTS bookings;
 DROP TABLE IF EXISTS gymclasses;
 DROP TABLE IF EXISTS members;
 DROP TABLE IF EXISTS personaltrainers;

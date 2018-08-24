@@ -26,13 +26,12 @@ class PersonalTrainer
     sql = "SELECT * FROM personaltrainers"
     result = SqlRunner.run(sql)
     return result.map { |pt| PersonalTrainer.new(pt) }
-
   end
 
-  # def self.delete_all()
-  #   sql = "DELETE FROM personaltrainers"
-  #   SqlRunner.run(sql)
-  # end
+  def self.delete_all()
+    sql = "DELETE FROM personaltrainers"
+    SqlRunner.run(sql)
+  end
 
 
 end
