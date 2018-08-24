@@ -7,7 +7,7 @@ class GymClass
     @pt_id = options['pt_id'].to_i()
     @name = options['name']
     @capacity = options['capacity'].to_i()
-    @day_of_week = options['day_of_week']
+    @day_of_week = options['day_of_week'].downcase
     @hour = options['hour']
   end
 
