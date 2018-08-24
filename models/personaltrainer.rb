@@ -1,5 +1,5 @@
 class Booking
-  attr_accessor(:gymclass_id, :member_id)
+  attr_accessor(:name, :description)
   attr_reader(:id)
 
   def initialize(options)
