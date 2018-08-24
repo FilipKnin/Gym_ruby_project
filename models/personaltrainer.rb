@@ -1,4 +1,4 @@
-class Booking
+class PersonalTrainer
   attr_accessor(:name, :description)
   attr_reader(:id)
 
