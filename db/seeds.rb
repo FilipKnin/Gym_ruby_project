@@ -64,5 +64,10 @@ member3 = Member.new({
   # gymclass1.save()
   # gymclass2.save()
 
+  booking1 = Booking.new({
+    'gymclass_id' => gymclass1.id,
+    'member_id' => member1.id
+    })
+
   binding.pry
   nil
