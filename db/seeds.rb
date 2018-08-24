@@ -41,9 +41,9 @@ member3 = Member.new({
   'premium' => true
   });
 
-  # member1.save()
-  # member2.save()
-  # member3.save()
+  member1.save()
+  member2.save()
+  member3.save()
 
   gymclass1 = GymClass.new({
     'pt_id' => personaltrainer1.id,
@@ -61,8 +61,8 @@ member3 = Member.new({
     'hour' => '12:00'
   });
 
-  # gymclass1.save()
-  # gymclass2.save()
+  gymclass1.save()
+  gymclass2.save()
 
   booking1 = Booking.new({
     'gymclass_id' => gymclass1.id,
