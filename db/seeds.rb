@@ -19,7 +19,7 @@ personaltrainer2 = PersonalTrainer.new({
 
 member1 = Member.new({
   'name' => 'Karim Benzema',
-  'email' => 'karimbenzema@gmail.com'
+  'email' => 'karimbenzema@gmail.com',
   'phone' => '48730996420',
   'DOB' => '12-04-1986',
   'premium' => false
@@ -27,7 +27,7 @@ member1 = Member.new({
 
 member2 = Member.new({
   'name' => 'Marco Asensio',
-  'email' => 'marcoasensio@gmail.com'
+  'email' => 'marcoasensio@gmail.com',
   'phone' => '48730996420',
   'DOB' => '12-04-1996',
   'premium' => true
@@ -35,7 +35,7 @@ member2 = Member.new({
 
 member3 = Member.new({
   'name' => 'Sergio Ramos',
-  'email' => 'sergioramos@gmail.com'
+  'email' => 'sergioramos@gmail.com',
   'phone' => '48730996420',
   'DOB' => '12-04-1986',
   'premium' => true
@@ -63,3 +63,6 @@ member3 = Member.new({
 
   # gymclass1.save()
   # gymclass2.save()
+
+  binding.pry
+  nil

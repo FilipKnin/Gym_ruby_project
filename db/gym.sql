@@ -27,7 +27,7 @@ CREATE TABLE gymclasses(
   hour time
 );
 
-CREATE TABLE gymclassesmembers(
+CREATE TABLE bookings(
   id SERIAL8 PRIMARY KEY,
   gymclass_id INT8 REFERENCES gymclasses(id) ON DELETE CASCADE,
   member_id INT8 REFERENCES members(id) ON DELETE CASCADE
