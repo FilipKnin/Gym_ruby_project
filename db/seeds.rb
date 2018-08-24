@@ -21,7 +21,7 @@ member1 = Member.new({
   'name' => 'Karim Benzema',
   'email' => 'karimbenzema@gmail.com',
   'phone' => '48730996420',
-  'DOB' => '12-04-1986',
+  'dob' => '12-04-1986',
   'premium' => false
 });
 
@@ -29,7 +29,7 @@ member2 = Member.new({
   'name' => 'Marco Asensio',
   'email' => 'marcoasensio@gmail.com',
   'phone' => '48730996420',
-  'DOB' => '12-04-1996',
+  'dob' => '12-04-1996',
   'premium' => true
 });
 
@@ -37,7 +37,7 @@ member3 = Member.new({
   'name' => 'Sergio Ramos',
   'email' => 'sergioramos@gmail.com',
   'phone' => '48730996420',
-  'DOB' => '12-04-1986',
+  'dob' => '12-04-1986',
   'premium' => true
   });
 
