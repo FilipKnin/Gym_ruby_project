@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS gyms;
+DROP TABLE IF EXISTS gymclassesmembers;
 DROP TABLE IF EXISTS gymclasses;
 DROP TABLE IF EXISTS members;
 DROP TABLE IF EXISTS personaltrainers;
@@ -23,14 +23,12 @@ CREATE TABLE gymclasses(
   pt_id INT8 REFERENCES personaltrainers(id),
   name VARCHAR(255),
   capacity INT,
-  day VARCHAR,
+  day_of_week VARCHAR(255),
   hour time
 );
 
-CREATE TABLE gyms(
+CREATE TABLE gymclassesmembers(
   id SERIAL8 PRIMARY KEY,
-  gymclasses_id INT8 REFERENCES gymclasses(id) ON DELETE CASCADE,
-  member_id INT8 REFERENCES members(id) ON DELETE CASCADE,
-  regular_price INT,
-  premium_price INT
+  gymclass_id INT8 REFERENCES gymclasses(id) ON DELETE CASCADE,
+  member_id INT8 REFERENCES members(id) ON DELETE CASCADE
 )
