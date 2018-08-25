@@ -4,6 +4,10 @@ require_relative('../models/member')
 require_relative('../models/personaltrainer')
 require('pry-byebug')
 
+Booking.delete_all()
+GymClass.delete_all()
+Member.delete_all()
+PersonalTrainer.delete_all()
 
 
 personaltrainer1 = PersonalTrainer.new({

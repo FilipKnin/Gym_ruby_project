@@ -27,4 +27,9 @@ class GymClass
     return result.map { |gymclass| GymClass.new(gymclass) }
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM gymclasses"
+    SqlRunner.run(sql)
+  end
+
 end
