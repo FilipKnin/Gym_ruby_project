@@ -32,4 +32,20 @@ class Member
     SqlRunner.run(sql)
   end
 
+  def find_age()
+    sql = "SELECT EXTRACT(YEAR FROM age(dob)) FROM members
+          WHERE dob = $1"
+    values = [@dob]
+    result = SqlRunner.run(sql, values).first['date_part'].to_i()
+    return result
+  end
+
+  def check_age(age)
+    if find_age() >= age
+      return true
+    else
+      return false
+    end
+  end
+
 end

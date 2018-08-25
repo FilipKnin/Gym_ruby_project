@@ -31,4 +31,9 @@ class TestMember < MiniTest::Test
   def test_member_has_premium()
     assert_equal(false, @member1.premium)
   end
+
+  # def test_check_age_over_16()
+  #   @member1.check_age()
+  #   assert_equal(32, @member1.check_age())
+  # end
 end

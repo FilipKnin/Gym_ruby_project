@@ -47,9 +47,18 @@ member3 = Member.new({
   'premium' => true
   });
 
+member4 = Member.new({
+  'name' => 'James Rodriguez',
+  'email' => 'jamesrodriguez@gmail.com',
+  'phone' => '48730996420',
+  'dob' => '12-04-2005',
+  'premium' => true
+  });
+
   member1.save()
   member2.save()
   member3.save()
+  member4.save()
 
   gymclass1 = GymClass.new({
     'pt_id' => personaltrainer1.id,
