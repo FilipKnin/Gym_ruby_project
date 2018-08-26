@@ -48,4 +48,15 @@ class Member
     end
   end
 
+  def all_GymClasses()
+    sql = "SELECT gymclasses.*
+          from gymclasses
+          INNER JOIN bookings
+          ON bookings.gymclass_id = gymclasses.id
+          WHERE bookings.member_id = $1"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    return result.map { |gymclass| GymClass.new(gymclass)  }
+  end
+
 end
