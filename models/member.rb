@@ -1,3 +1,5 @@
+require_relative( '../db/sql_runner' )
+
 class Member
   attr_accessor(:name, :email, :phone, :dob, :premium)
   attr_reader(:id)
