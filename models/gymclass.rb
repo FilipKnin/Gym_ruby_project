@@ -43,4 +43,8 @@ class GymClass
     return result.map { |member| Member.new(member)  }
   end
 
+  # def print_name()
+  #   printing short name of object
+  # end
+
 end
