@@ -25,7 +25,7 @@
 
 
  <ul>
-  <% @member.all_gym_classes.each do |member| %>
-  <li><%= member.name %>: <%= member.day_of_week %> <%= member.hour %></li>
+  <% @member.all_gym_classes.each do |gymclass| %>
+  <li><%= gymclass.name %>: <%= gymclass.day_of_week %> <%= gymclass.hour %></li>
   <% end %>
 </ul>

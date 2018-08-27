@@ -2,5 +2,7 @@
 <h2><%= @gymclass.day_of_week %> : <%= @gymclass.hour %> </h2>
 
 <ul>
-  <li><%= @gymclass.all_members[0].name %> </li>
+ <% @gymclass.all_members.each do |member| %>
+ <li><%= member.name %></li>
+ <% end %>
 </ul>
