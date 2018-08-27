@@ -6,11 +6,11 @@ also_reload( './models/*' )
 
 get '/members' do
   @members = Member.all()
-  erb (:"members/index")
+  erb (:'members/index')
 end
 
 
-# get '/zombies' do
-#   @zombies = Zombie.all()
-#   erb ( :"zombies/index" )
-# end
+get '/members/:id' do
+  @member = Member.find_by_id(params['id'].to_i())
+  erb(:'members/show')
+end

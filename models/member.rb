@@ -66,7 +66,8 @@ class Member
           WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
-    return result.map { |member| Member.new(member)  }
+    outcome = result.map { |member| Member.new(member)  }
+    return outcome[0]
   end
 
 end
