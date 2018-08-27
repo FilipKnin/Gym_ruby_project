@@ -10,7 +10,7 @@ get '/members' do
 end
 
 get '/members/new' do
-  erb(:'members/new')
+  erb(:'members/new') #does not work with a date format.
 end
 
 post '/members' do

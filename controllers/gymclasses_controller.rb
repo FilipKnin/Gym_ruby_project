@@ -9,6 +9,10 @@ get '/gymclasses' do
   erb(:'gymclasses/index')
 end
 
+get '/gymclasses/new' do
+  erb(:'gymclasses/new')
+end
+
 get '/gymclasses/:id' do
   @gymclass = GymClass.find_by_id(params['id'].to_i())
   erb(:'gymclasses/show')
