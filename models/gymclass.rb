@@ -43,6 +43,14 @@ class GymClass
     return result.map { |member| Member.new(member)  }
   end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM gymclasses
+          WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return result.map { |gymclass| GymClass.new(gymclass)  }
+  end
+
   # def print_name()
   #   printing short name of object
   # end

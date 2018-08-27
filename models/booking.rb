@@ -29,4 +29,12 @@ class Booking
     sql = "DELETE FROM bookings"
     SqlRunner.run(sql)
   end
+
+  def self.find_by_id(id)
+    sql = "SELECT * FROM bookings
+          WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return result.map { |booking| Booking.new(booking)  }
+  end
 end

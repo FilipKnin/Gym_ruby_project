@@ -33,5 +33,12 @@ class PersonalTrainer
     SqlRunner.run(sql)
   end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM personaltrainers
+          WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return result.map { |pt| PersonalTrainer.new(pt)  }
+  end
 
 end
