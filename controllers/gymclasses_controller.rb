@@ -13,6 +13,13 @@ get '/gymclasses/new' do
   erb(:'gymclasses/new')
 end
 
+post '/gymclasses' do
+  newgymclass = GymClass.new(params)
+  newgymclass.save()
+  erb(:'gymclasses/create')
+  
+end
+
 get '/gymclasses/:id' do
   @gymclass = GymClass.find_by_id(params['id'].to_i())
   erb(:'gymclasses/show')
