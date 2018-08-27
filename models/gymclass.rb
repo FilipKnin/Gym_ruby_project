@@ -51,7 +51,8 @@ class GymClass
           WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
-    return result.map { |gymclass| GymClass.new(gymclass)  }
+    outcome = result.map { |gymclass| GymClass.new(gymclass)  }
+    return outcome[0]
   end
 
   # def print_name()
