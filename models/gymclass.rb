@@ -1,3 +1,6 @@
+require_relative('../db/sql_runner')
+
+
 class GymClass
   attr_accessor(:pt_id, :name, :capacity, :day_of_week, :hour)
   attr_reader(:id)

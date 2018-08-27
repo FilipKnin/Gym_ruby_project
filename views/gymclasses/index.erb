@@ -1,0 +1,26 @@
+<table>
+ <tr>
+   <th>name</th>
+   <th></th>
+   <th>day</th>
+   <th></th>
+   <th>time</th>
+   <th></th>
+   <th>capacity</th>
+   <th></th>
+   <th>personal trainer</th>
+ </tr>
+ <% for gymclass in @gymclasses %>
+ <tr>
+   <td> <%= gymclass.name %> </td>
+   <td></td>
+   <td><%= gymclass.day_of_week %></td>
+   <td></td>
+   <td><%= gymclass.hour %></td>
+   <td></td>
+   <td><%= gymclass.capacity %></td>
+   <td></td>
+   <td><%= gymclass.pt_id %></td>
+ </tr>
+ <% end %>
+</table>
