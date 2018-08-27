@@ -22,5 +22,10 @@
   </tr>
 </table>
 
- <h2>Classes:</h2>
- <%= @member.all_gym_classes[0].name %>: <%= @member.all_gym_classes[0].hour %> 
+
+
+ <ul>
+  <% @member.all_gym_classes.each do |member| %>
+  <li><%= member.name %>: <%= member.day_of_week %> <%= member.hour %></li>
+  <% end %>
+</ul>
