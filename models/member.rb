@@ -50,7 +50,7 @@ class Member
     end
   end
 
-  def all_GymClasses()
+  def all_gym_classes()
     sql = "SELECT gymclasses.*
           from gymclasses
           INNER JOIN bookings
