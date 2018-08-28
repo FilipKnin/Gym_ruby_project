@@ -62,6 +62,17 @@ class GymClass
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE gymclasses
+          SET
+          (pt_id, name, capacity, day_of_week, hour)
+          =
+          ($1, $2, $3, $4, $5)
+          WHERE id = $6"
+    values = [@pt_id, @name, @capacity, @day_of_week, @hour, @id]
+    SqlRunner.run(sql, values)
+  end
+
   # def print_name()
   #   printing short name of object
   # end

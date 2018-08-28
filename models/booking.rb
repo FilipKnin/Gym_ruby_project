@@ -44,4 +44,15 @@ class Booking
     values = [@id]
     SqlRunner.run(sql, values)
   end
+
+  def update()
+    sql = "UPDATE bookings
+          SET
+          (gymclass_id, member_id)
+          =
+          ($1, $2)
+          WHERE id = $3"
+    values = [@gymclass_id, @member_id, @id]
+    SqlRunner.run(sql, values)
+  end
 end

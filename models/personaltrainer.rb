@@ -48,4 +48,15 @@ class PersonalTrainer
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE personaltrainers
+          SET
+          (name, description)
+          =
+          ($1, $2)
+          WHERE id = $3"
+    values = [@name, @description, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
