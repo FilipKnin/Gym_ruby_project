@@ -1,0 +1,21 @@
+<form method="post" action="/bookings">
+
+
+  <label for="gymclass_id">classes:</label>
+  <select id="gc-select" name="gymclass_id">
+    <% @gymclasses.each do |gymclass| %>
+     <option value="<%= gymclass.id %>"><%=gymclass.name%></option>
+    <% end %>
+  </select>
+
+  <label for="member_id">Member:</label>
+  <select id="m-select" name="member_id">
+    <% @members.each do |member| %>
+     <option value="<%= member.id %>"><%=member.name%></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Create new booking"></input>
+
+
+</form>
