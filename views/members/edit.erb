@@ -1,0 +1,27 @@
+<form method ="post" action="/members/<%= @member.id %>">
+  <label for="name">Name:</label>
+    <input id="name" type="text" name="name" value="<%= @member.name %>"/>
+
+
+  <label for="email">email:</label>
+    <input id="email" type="text" name="email" value="<%= @member.email %>"/>
+
+  <label for="phone">phone:</label>
+    <input id="phone" type="int" name="phone" value="<%= @member.phone %>"/>
+
+  <label for="dob">DOB:</label>
+    <input id="dob" type="date" name="dob" value="<%= @member.dob %>"/>
+
+  <label for="premium-select">Premium:</label>
+    <select id="premium-select" name="premium">
+      <option value="true"
+      <%="selected" if @member.premium == 'true'%>
+      >True</option>
+      <option value="false"
+      <%="seleceted" if @member.premium == 'false'%>
+      >False</option>
+    </select>
+
+
+  <input type='submit' value="Edit member"/>
+</form>

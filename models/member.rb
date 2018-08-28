@@ -87,4 +87,5 @@ class Member
     values = [@name, @email, @phone, @dob, @premium, @id]
     SqlRunner.run(sql, values)
   end
+
 end
