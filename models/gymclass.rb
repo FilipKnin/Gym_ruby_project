@@ -55,6 +55,13 @@ class GymClass
     return outcome[0]
   end
 
+  def delete()
+    sql = "DELETE FROM gymclasses
+          WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   # def print_name()
   #   printing short name of object
   # end

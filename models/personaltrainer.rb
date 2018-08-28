@@ -41,4 +41,11 @@ class PersonalTrainer
     return result.map { |pt| PersonalTrainer.new(pt)  }
   end
 
+  def delete()
+    sql = "DELETE FROM personaltrainers
+          WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 end

@@ -16,10 +16,14 @@ end
 post '/members' do
   member = Member.new(params)
   member.save()
-  redirect to ('/members')
-
-  # erb(:'members/create') why not?
+  erb(:'members/create')
 end
+
+# post '/pizza-orders/:id' do # update
+#   PizzaOrder.new( params ).update
+#   redirect to '/pizza-orders'
+# end
+
 
 get '/members/:id' do
   @member = Member.find_by_id(params['id'].to_i())
