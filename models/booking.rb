@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner')
+
 class Booking
   attr_accessor(:gymclass_id, :member_id)
   attr_reader(:id)
