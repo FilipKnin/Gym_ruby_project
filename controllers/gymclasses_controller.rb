@@ -33,3 +33,9 @@ post '/gymclasses/:id' do
   GymClass.new(params).update
   redirect to '/gymclasses'
 end
+
+post '/gymclasses/:id/delete' do
+  @gymclass = GymClass.find_by_id(params['id'])
+  @gymclass.delete
+  redirect to '/gymclasses'
+end
