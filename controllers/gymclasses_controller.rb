@@ -11,6 +11,7 @@ get '/gymclasses' do
 end
 
 get '/gymclasses/new' do
+  @personaltrainers = PersonalTrainer.all
   erb(:'gymclasses/new')
 end
 
