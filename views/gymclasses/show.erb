@@ -1,7 +1,7 @@
 <h1><%= @gymclass.name %></h1>
 <h2><%= @gymclass.day_of_week %> : <%= @gymclass.hour %> </h2>
 <p>Capacity: <%= @gymclass.capacity %></p>
-<p>Personal Trainer:<%= @gymclass.pt_id %></p>
+<p>Personal Trainer: <%= PersonalTrainer.find_by_id(@gymclass.pt_id)[0].name %></p>
 
 <form method="get" action="/gymclasses/<%= @gymclass.id %>/edit">
   <input type="submit" value="Edit classes"/>
