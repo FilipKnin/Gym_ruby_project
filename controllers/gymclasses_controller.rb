@@ -28,6 +28,7 @@ end
 
 get '/gymclasses/:id/edit' do
   @gymclass = GymClass.find_by_id(params['id'])
+  @personaltrainers = PersonalTrainer.all
   erb(:'gymclasses/edit')
 end
 

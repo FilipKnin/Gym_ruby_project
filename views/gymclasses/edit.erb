@@ -34,7 +34,13 @@
   <input id="capacity" type="int" name="capacity" value="<%= @gymclass.capacity %>"/>
 
   <label for="pt">Personal Trainer:</label>
-  <input id="pt" type="text" name="pt_id" value="<%= @gymclass.pt_id %>"/>
+  <select id="pt-select" name="pt_id">
+    <% @personaltrainers.each do |personaltrainer| %>
+     <option value="<%= personaltrainer.id %>"
+       <%="selected" if @gymclass.pt_id == personaltrainer.id %>
+       ><%=personaltrainer.name%></option>
+    <% end %>
+  </select>
 
 
   <input type="submit" value="Edit classes"></input>
