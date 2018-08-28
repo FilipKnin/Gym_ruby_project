@@ -20,10 +20,12 @@ post '/members' do
   erb(:'members/create')
 end
 
-
-
-
 get '/members/:id' do
   @member = Member.find_by_id(params['id'].to_i())
   erb(:'members/show')
+end
+
+post '/members/:id' do
+  Member.new(params).update
+  redirect to '/members'
 end
