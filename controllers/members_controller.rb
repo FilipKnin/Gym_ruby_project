@@ -2,6 +2,7 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/member.rb' )
 also_reload( '../models/*' )
+require('pry')
 
 
 get '/members' do
@@ -19,10 +20,7 @@ post '/members' do
   erb(:'members/create')
 end
 
-# post '/pizza-orders/:id' do # update
-#   PizzaOrder.new( params ).update
-#   redirect to '/pizza-orders'
-# end
+
 
 
 get '/members/:id' do
