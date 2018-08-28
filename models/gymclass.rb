@@ -44,6 +44,7 @@ class GymClass
     values = [@id]
     result = SqlRunner.run(sql, values)
     return result.map { |member| Member.new(member)  }
+
   end
 
   def self.find_by_id(id)

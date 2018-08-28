@@ -11,3 +11,11 @@
 <form method="post" action="/gymclasses/<%= @gymclass.id %>/delete">
   <input type="submit" value="Delete classes"/>
 </form>
+<ul>
+
+
+<% members = @gymclass.all_members %>
+<% members.each do |member| %>
+<li><%= member.name %> </li>
+<% end %>
+</ul>

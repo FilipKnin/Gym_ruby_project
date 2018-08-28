@@ -20,8 +20,14 @@ personaltrainer2 = PersonalTrainer.new({
   'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 });
 
+personaltrainer3 = PersonalTrainer.new({
+  'name' => 'unassigned',
+  'description' => 'unassigned'
+});
+
 personaltrainer1.save()
 personaltrainer2.save()
+personaltrainer3.save()
 
 member1 = Member.new({
   'name' => 'Karim Benzema',
@@ -82,9 +88,15 @@ member4 = Member.new({
   booking1 = Booking.new({
     'gymclass_id' => gymclass1.id,
     'member_id' => member1.id
+  });
+
+  booking2 = Booking.new({
+    'gymclass_id' => gymclass1.id,
+    'member_id' => member2.id
   })
 
   booking1.save()
+  booking2.save()
 
   binding.pry
   nil
