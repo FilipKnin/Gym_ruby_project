@@ -1,8 +1,13 @@
 <h1><%= @gymclass.name %></h1>
 <h2><%= @gymclass.day_of_week %> : <%= @gymclass.hour %> </h2>
+<p>Capacity: <%= @gymclass.capacity %></p>
+<p>Personal Trainer:<%= @gymclass.pt_id %></p>
 
-<ul>
- <% @gymclass.all_members.each do |member| %>
- <li><%= member.name %></li>
- <% end %>
-</ul>
+<form method="get" action="/gymclasses/<%= @gymclass.id %>/edit">
+  <input type="submit" value="Edit classes"/>
+</form>
+
+
+<form method="post" action="/gymclasses/<%= @gymclass.id %>/delete">
+  <input type="submit" value="Delete classes"/>
+</form>

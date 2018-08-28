@@ -24,3 +24,8 @@
  </tr>
  <% end %>
 </table>
+
+<% @gymclasses.each do |gymclass| %>
+<p><%= gymclass.name %></p>
+<p> <a href="/gymclasses/<%= gymclass.id %>">Show details</a> </p>
+<% end %>
