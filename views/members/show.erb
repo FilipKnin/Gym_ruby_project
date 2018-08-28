@@ -29,3 +29,12 @@
   <li><%= gymclass.name %>: <%= gymclass.day_of_week %> <%= gymclass.hour %></li>
   <% end %>
 </ul>
+
+<form method="get" action="/members/<%= @member.id %>/edit">
+  <input type="submit" value="Edit member"/>
+</form>
+
+
+<form method="post" action="/members/<%= @member.id %>/delete">
+  <input type="submit" value="Delete member"/>
+</form>

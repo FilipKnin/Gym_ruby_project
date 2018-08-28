@@ -34,3 +34,9 @@ get '/members/:id/edit' do
   @member = Member.find_by_id(params['id'])
   erb(:'members/edit')
 end
+
+# post '/gymclasses/:id/delete' do
+#   @member = Membner.find_by_id(params['id'])
+#   @member.delete
+#   redirect to '/members'
+# end

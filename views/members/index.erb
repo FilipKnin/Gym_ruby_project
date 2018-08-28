@@ -1,5 +1,31 @@
-<ul>
-  <% @members.each do |member| %>
-    <li><%= member.name %></li>
-  <% end %>
-</ul>
+<table>
+ <tr>
+   <th>name</th>
+   <th></th>
+   <th>email</th>
+   <th></th>
+   <th>phone</th>
+   <th></th>
+   <th>DOB</th>
+   <th></th>
+   <th>premium</th>
+ </tr>
+ <% for member in @members %>
+ <tr>
+   <td> <%= member.name %> </td>
+   <td></td>
+   <td><%= member.email %></td>
+   <td></td>
+   <td><%= member.phone %></td>
+   <td></td>
+   <td><%= member.dob %></td>
+   <td></td>
+   <td><%= member.premium %></td>
+ </tr>
+ <% end %>
+</table>
+
+<% @members.each do |member| %>
+<p><%= member.name %></p>
+<p> <a href="/members/<%= member.id %>">Show details</a> </p>
+<% end %>
