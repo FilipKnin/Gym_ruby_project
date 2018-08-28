@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/gymclass')
+require_relative('../models/personaltrainer')
 also_reload('../models/*')
 
 

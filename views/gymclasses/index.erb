@@ -20,7 +20,7 @@
    <td></td>
    <td><%= gymclass.capacity %></td>
    <td></td>
-   <td><%= gymclass.pt_id %></td>
+   <td><%= PersonalTrainer.find_by_id(gymclass.pt_id).name %></td>
  </tr>
  <% end %>
 </table>

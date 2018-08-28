@@ -38,7 +38,8 @@ class PersonalTrainer
           WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values)
-    return result.map { |pt| PersonalTrainer.new(pt)  }
+    outcome = result.map { |pt| PersonalTrainer.new(pt)  }
+    return outcome[0]
   end
 
   def delete()
