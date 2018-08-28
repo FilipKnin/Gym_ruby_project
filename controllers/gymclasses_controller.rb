@@ -16,7 +16,7 @@ end
 post '/gymclasses' do
   newgymclass = GymClass.new(params)
   newgymclass.save()
-  erb(:'gymclasses/create')  
+  erb(:'gymclasses/create')
 end
 
 get '/gymclasses/:id' do
@@ -24,7 +24,12 @@ get '/gymclasses/:id' do
   erb(:'gymclasses/show')
 end
 
-post '/gymclasses/id' do
+get '/gymclasses/:id/edit' do
+  @gymclass = GymClass.find_by_id(params['id'])
+  erb(:'gymclasses/edit')
+end
+
+post '/gymclasses/:id' do
   GymClass.new(params).update
   redirect to '/gymclasses'
 end

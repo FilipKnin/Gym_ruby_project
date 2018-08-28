@@ -1,0 +1,43 @@
+<form method="post" action="/gymclasses/<%= @gymclass.id %> ">
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name" value="<%= @gymclass.name %>"  />
+
+  <label for="day-select">Select day:</label>
+  <select id="day-select" name="day_of_week">
+    <option value="monday"
+    <%="selected" if @gymclass.day_of_week == 'monday' %>
+    >monday</option>
+    <option value="tuesday"
+    <%="selected" if @gymclass.day_of_week == 'tuesday' %>
+    >tuesday</option>
+    <option value="wednesday"
+    <%="selected" if @gymclass.day_of_week == 'wednesday' %>
+    >wednesday</option>
+    <option value="thursday"
+    <%="selected" if @gymclass.day_of_week == 'thursday' %>
+    >thursday</option>
+    <option value="friday"
+    <%="selected" if @gymclass.day_of_week == 'friday' %>
+    >friday</option>
+    <option value="saturday"
+    <%="selected" if @gymclass.day_of_week == 'saturday' %>
+    >saturday</option>
+    <option value="sunday"
+    <%="selected" if @gymclass.day_of_week == 'sunday' %>
+    >sunday</option>
+  </select>
+
+  <label for="time">Time:</label>
+  <input id="time" type="time" name="hour" value="<%= @gymclass.hour %>"/>
+
+  <label for="capacity">Capacity:</label>
+  <input id="capacity" type="int" name="capacity" value="<%= @gymclass.capacity %>"/>
+
+  <label for="pt">Personal Trainer:</label>
+  <input id="pt" type="text" name="pt_id" value="<%= @gymclass.pt_id %>"/>
+
+
+  <input type="submit" value="Edit classes"></input>
+
+
+</form>
