@@ -58,4 +58,6 @@ class Booking
     values = [@gymclass_id, @member_id, @id]
     SqlRunner.run(sql, values)
   end
+
+  
 end

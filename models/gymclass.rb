@@ -78,7 +78,18 @@ class GymClass
     if numofbookings < @capacity
       return true
     else
-      return false 
+      return false
     end
   end
+
+  def count_num_of_bookings()
+    sql = "SELECT COUNT(id)
+          FROM bookings
+          WHERE bookings.gymclass_id = $1"
+    values = [@id]
+    result = SqlRunner.run(sql,values)
+    return result.getvalue(0,0).to_i()
+
+  end
+
 end
