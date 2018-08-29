@@ -21,3 +21,9 @@ post '/bookings' do
   newbooking.save()
   redirect to ('/')
 end
+
+post '/bookings/:id/delete' do
+  @booking = Booking.find_by_id(params['id'])
+  @booking.delete
+  redirect to '/classes'
+end
