@@ -104,5 +104,14 @@ class Member
     SqlRunner.run(sql, values)
   end
 
+  def delete_bookings_by_id(cid, mid)
+    sql = "DELETE FROM bookings
+          WHERE bookings.gymclass_id = $1
+          AND
+          bookings.member_id = $2"
+    values = [cid, mid]
+    SqlRunner.run(sql, values)
+  end
+
 
 end
