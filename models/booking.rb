@@ -38,6 +38,7 @@ class Booking
     values = [id]
     result = SqlRunner.run(sql, values)
     return result.map { |booking| Booking.new(booking)  }
+
   end
 
   def delete()

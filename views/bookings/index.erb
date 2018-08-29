@@ -1,1 +1,31 @@
-test
+<table>
+ <tr>
+   <th>ID</th>
+   <th></th>
+   <th>Classes</th>
+   <th></th>
+   <th>Member</th>
+   <th></th>
+   <th>date</th>
+   <th></th>
+   <th>time</th>
+ </tr>
+ <% for booking in @bookings %>
+ <tr>
+   <td> <%= booking.id %> </td>
+   <td></td>
+   <td><%= GymClass.find_by_id(booking.gymclass_id).name %></td>
+   <td></td>
+   <td><%= Member.find_by_id(booking.member_id).name %></td>
+   <td></td>
+   <td><%= GymClass.find_by_id(booking.gymclass_id).day_of_week %></td>
+   <td></td>
+   <td><%= GymClass.find_by_id(booking.gymclass_id).hour %></td>
+   <td></td>
+   <td><form method="post" action="/bookings/<%= booking.id %>/delete">
+     <input type="submit" value="Delete booking"/></td>
+   </form>
+   <ul>
+ </tr>
+ <% end %>
+</table>
