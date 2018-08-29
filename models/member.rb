@@ -97,6 +97,12 @@ class Member
     return result.map { |booking| Booking.new(booking)  }
   end
 
+  def delete_bookings()
+    sql = "DELETE FROM bookings
+          WHERE bookings.member_id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
 
 
 end
