@@ -74,8 +74,11 @@ class GymClass
     SqlRunner.run(sql, values)
   end
 
-  # def print_name()
-  #   printing short name of object
-  # end
-
+  def check_space(numofbookings)
+    if numofbookings < @capacity
+      return true
+    else
+      return false 
+    end
+  end
 end
