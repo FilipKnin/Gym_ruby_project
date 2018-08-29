@@ -19,5 +19,5 @@ end
 post '/bookings' do
   newbooking = Booking.new(params)
   newbooking.save()
-  redirect to ('/bookings')  
+  redirect to ('/')
 end
