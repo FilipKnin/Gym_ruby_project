@@ -89,7 +89,6 @@ class GymClass
     values = [@id]
     result = SqlRunner.run(sql,values)
     return result.getvalue(0,0).to_i()
-
   end
 
 end
