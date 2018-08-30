@@ -58,24 +58,24 @@ class Booking
     SqlRunner.run(sql, values)
   end
 
-  def add_booking(booking, gymclass)
-    numofbookings = gymclass.count_num_of_bookings()
-    if gymclass.check_space(numofbookings) == true
-      booking.save()
-    else
-      return "We can't book it!"
-    end
-  end
-
-  # add booking v2
-
-  # def add_booking(gymclass)
+  # def add_booking(booking, gymclass)
   #   numofbookings = gymclass.count_num_of_bookings()
   #   if gymclass.check_space(numofbookings) == true
-  #     save()
+  #     booking.save()
   #   else
   #     return "We can't book it!"
   #   end
   # end
+
+  # add booking v2
+
+  def add_booking(gymclass)
+    numofbookings = gymclass.count_num_of_bookings()
+    if gymclass.check_space(numofbookings) == true
+      save()
+    else
+      return "We can't book it!"
+    end
+  end
 
 end
