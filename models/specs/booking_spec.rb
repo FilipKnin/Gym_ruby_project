@@ -20,8 +20,14 @@ class TestBooking < MiniTest::Test
   end
 
   def test_add_booking()
-    @booking1(@gymclass1)
-
+    add_booking(@booking1, @gymclass1)
+    assert_equal()
   end
+
+  # def test_add_booking()
+  #   @booking1.add_booking(@gymclass1)
+  #   assert_equal()
+  # end
+
 
 end
